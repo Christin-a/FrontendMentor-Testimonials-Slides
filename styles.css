@@ -1,0 +1,238 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --Dark-Blue: hsl(240, 38%, 20%);
+  --Grayish-Blue: hsl(240, 18%, 77%);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: Inter, sans-serif;
+}
+
+.slidesContainer {
+  background-image: url(images/pattern-bg.svg);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: 50% 5%;
+  width: 100%;
+  margin: auto;
+  padding: 2rem 2rem 1rem 2rem;
+  position: relative;
+}
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial2 {
+  display: none;
+}
+
+.slide-in {
+  animation-name: slide-in;
+  animation-duration: 0.5s;
+}
+
+@keyframes slide-in {
+  from {
+    margin-left: 50%;
+    width: 200%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .slidesContainer {
+    background-size: 50%;
+    background-position: 95% center;
+    padding: 6rem 4rem;
+  }
+
+  .testimonials {
+    flex-direction: row-reverse;
+    position: relative;
+  }
+}
+
+/******************* profile image *************/
+
+.hero {
+  width: 100%;
+  height: auto;
+  padding-top: 1rem;
+}
+
+.profile-img {
+  display: block;
+  margin: auto;
+  width: 70%;
+  border-radius: 10px;
+  -webkit-box-shadow: -10px 0px 13px -1px rgba(32, 32, 70, 0.14),
+    10px 0px 13px -11px rgba(32, 32, 70, 0.14),
+    0px 19px 26px -2px rgba(32, 32, 70, 0.27);
+  box-shadow: -10px 0px 13px -11px rgba(32, 32, 70, 0.14),
+    10px 0px 13px -11px rgba(32, 32, 70, 0.14),
+    0px 19px 26px -2px rgba(32, 32, 70, 0.27);
+}
+
+@media screen and (min-width: 1400px) {
+  .profile-img {
+    width: 85%;
+  }
+
+  .hero {
+    flex: 5;
+  }
+}
+
+/******************* slide toggles *************/
+
+.icons {
+  display: block;
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  position: absolute;
+  bottom: 18rem;
+  right: 40%;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.icons img {
+  height: 10px;
+}
+
+.pr {
+  margin-right: 0.8rem;
+}
+.nx {
+  margin-left: 0.8rem;
+}
+
+.icons:hover {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(128, 128, 128, 0.398);
+  -webkit-box-shadow: -10px 0px 13px -1px rgba(32, 32, 70, 0.14),
+    10px 0px 13px -11px rgba(32, 32, 70, 0.14),
+    0px 19px 26px -2px rgba(32, 32, 70, 0.27);
+  box-shadow: -10px 0px 13px -11px rgba(32, 32, 70, 0.14),
+    10px 0px 13px -11px rgba(32, 32, 70, 0.14),
+    0px 19px 26px -2px rgba(32, 32, 70, 0.27);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1400px) {
+  .icons {
+    padding: 1rem 1.5rem;
+    bottom: 10%;
+    right: 35%;
+  }
+
+  .icons img {
+    height: 15px;
+  }
+  .button {
+    transition: 0.1s;
+  }
+  .button:hover {
+    height: 20px;
+  }
+}
+
+/******************* quote, name and role *************/
+
+.testimonial {
+  margin-top: 3.5rem;
+  height: auto;
+  background-image: url(images/pattern-quotes.svg);
+  background-repeat: no-repeat;
+  background-size: 20%;
+  background-position: top center;
+}
+
+.quote,
+.name,
+.role {
+  text-align: center;
+}
+
+.quote {
+  padding-top: 1.5rem;
+  color: var(--Dark-Blue);
+  font-weight: 300;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.name {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.role {
+  font-size: 1rem;
+  color: var(--Grayish-Blue);
+}
+
+@media screen and (min-width: 1400px) {
+  .testimonial {
+    flex: 5;
+    background-position: center 20%;
+  }
+
+  .quote,
+  .name,
+  .role {
+    text-align: left;
+    position: relative;
+    left: 18%;
+    top: 20%;
+  }
+
+  .quote {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+  .name,
+  .role {
+    display: inline-block;
+  }
+}
+
+/******************* footer *************/
+
+.attribution {
+  padding: 1rem 0;
+  font-size: 0.6rem;
+  width: 100%;
+  text-align: center;
+  background-image: url(images/pattern-curve.svg);
+  background-repeat: no-repeat;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 1400px) {
+  .attribution {
+    font-size: 1rem;
+    height: 20%;
+  }
+}
